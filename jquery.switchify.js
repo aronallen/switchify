@@ -12,7 +12,7 @@ return data[i].identity;}},searchVersion:function(dataString){var index=dataStri
 		if(typeof callback === 'undefined'){
 			callback = function(state){ 
 				//callback example.
-			}
+			};
 		}
 
         if (!switchify.data('switchify:elements') || !switchify.data('switchify:options') || _options) {
@@ -33,7 +33,7 @@ return data[i].identity;}},searchVersion:function(dataString){var index=dataStri
 				//this is experimental do not use
 				rounded: false,
 				clickable: true
-            }         
+            };         
 
 
 			if(!switchify.data('switchify:options')){
@@ -57,7 +57,7 @@ return data[i].identity;}},searchVersion:function(dataString){var index=dataStri
 		
 		if(options.size < 20){
 			options.size = 20;
-			console.log("switchify: can't make switch smaller than 20px, forcing switch to 20px size")
+			console.log("switchify: can't make switch smaller than 20px, forcing switch to 20px size");
 		}
 		
 
@@ -149,7 +149,7 @@ return data[i].identity;}},searchVersion:function(dataString){var index=dataStri
 					'float':'left',
 					'cursor':'pointer',
 					'height':'100%'
-				})          
+				});          
 				
 				
 				elements.inner.children("div").css({
@@ -169,7 +169,7 @@ return data[i].identity;}},searchVersion:function(dataString){var index=dataStri
 				'text-align':'center',
 				'-webkit-box-sizing':'border-box',
 				'-moz-box-sizing':'border-box',
-				'box-sizing':'border-box'})
+				'box-sizing':'border-box'});
 
                 //Round corners
                 if (options.rounded) {
@@ -192,10 +192,10 @@ return data[i].identity;}},searchVersion:function(dataString){var index=dataStri
 
 
                     $(".off p", elements.inner).css({
-                        'padding-right': options.size / 2,
+                        'padding-right': options.size / 2
                     });
                     $(".on p", elements.inner).css({
-                        'padding-left': options.size / 2,
+                        'padding-left': options.size / 2
                     });
 
 
@@ -207,16 +207,16 @@ return data[i].identity;}},searchVersion:function(dataString){var index=dataStri
                     //Apply shading on elements.peg
                     elements.peg.css({
                         'box-shadow': 'inset 0px 1px 1px rgba(255,255,255,1)',
-                        'background-image': '-webkit-gradient(linear, right bottom, right top, from(rgba(255,255,255,.0)), to(rgba(255,255,255,1)))',
+                        'background-image': '-webkit-gradient(linear, right bottom, right top, from(rgba(255,255,255,.0)), to(rgba(255,255,255,1)))'
                     });
 
                     //For Firefox
                     if (elements.peg.css('background-image') === 'none') {
-                        elements.peg.css('background-image', '-moz-linear-gradient(bottom, rgba(255,255,255,.0), rgba(255,255,255,1))')
+                        elements.peg.css('background-image', '-moz-linear-gradient(bottom, rgba(255,255,255,.0), rgba(255,255,255,1))');
                     }
 
 					if (elements.peg.css('background-image') === 'none') {
-                        elements.peg.css('background-image', '-o-linear-gradient(bottom, rgba(255,255,255,.0), rgba(255,255,255,1))')
+                        elements.peg.css('background-image', '-o-linear-gradient(bottom, rgba(255,255,255,.0), rgba(255,255,255,1))');
                     }
 
                     //Apply shading on options				
@@ -228,12 +228,12 @@ return data[i].identity;}},searchVersion:function(dataString){var index=dataStri
 
                     //For Firefox
                     if ($(".option", elements.inner).css('background-image') === 'none') {
-                        $(".option", elements.inner).css('background-image', '-moz-linear-gradient(top, rgba(0,0,0,.3), rgba(0,0,0,.0))')
+                        $(".option", elements.inner).css('background-image', '-moz-linear-gradient(top, rgba(0,0,0,.3), rgba(0,0,0,.0))');
                     }
 
 					//For Opera
 					if ($(".option", elements.inner).css('background-image') === 'none') {
-                        $(".option", elements.inner).css('background-image', '-o-linear-gradient(top, rgba(0,0,0,.3), rgba(0,0,0,.0))')
+                        $(".option", elements.inner).css('background-image', '-o-linear-gradient(top, rgba(0,0,0,.3), rgba(0,0,0,.0))');
                     }
 
 
@@ -251,7 +251,7 @@ return data[i].identity;}},searchVersion:function(dataString){var index=dataStri
                 elements.peg.css({
                     'position': 'relative',
                     'z-index': 2
-                })
+                });
 
 
                 elements.peg.css({
@@ -327,7 +327,7 @@ return data[i].identity;}},searchVersion:function(dataString){var index=dataStri
 						var s = ($(event.target).hasClass("switchify")) ? $(event.target) : $(event.target).parents(".switchify");
 						
 						//if the switch was not found, we call mouse up to force the interaction to end
-						if(s.length === 0) that.move(event)
+						if(s.length === 0) that.move(event);
 					});
 					
                     break;
@@ -393,8 +393,8 @@ return data[i].identity;}},searchVersion:function(dataString){var index=dataStri
 						elements.inner.removeClass('animate');
                         that.hide_unselected_option();
 						callback(options.state);
-					}
-				}
+					};
+				};
 
                 var diff;
 
@@ -440,20 +440,20 @@ return data[i].identity;}},searchVersion:function(dataString){var index=dataStri
 						//if the div is rounded, use margin left, else use the trasnform
 						if(!options.rounded){
 							elements.inner.css({
-			                    '-webkit-transform': 'translate3d(' + (x) + 'px, 0px, 0px)',
+			                    '-webkit-transform': 'translate3d(' + (x) + 'px, 0px, 0px)'
 			                });
 							break;
 						}
 					case 'Firefox':
 						if(document.body.style.MozTransform !== undefined){							
 							elements.inner.css({
-			                	'-moz-transform': 'translateX(' + (x) + 'px)',
+			                	'-moz-transform': 'translateX(' + (x) + 'px)'
 			            	});
 							break;
 						}
 					case 'Opera':
 						elements.inner.css({
-		                	'-o-transform': 'translateX(' + (x) + 'px)',
+		                	'-o-transform': 'translateX(' + (x) + 'px)'
 		            	});
 						break;
 					default:
@@ -463,7 +463,7 @@ return data[i].identity;}},searchVersion:function(dataString){var index=dataStri
 						break;
 				}
             }
-        }
+        };
 
         this.functions.render(this);  
 		return this;

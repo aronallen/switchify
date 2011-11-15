@@ -4,7 +4,19 @@ Switchify is a jQuery plugin that emulates a switch from UIKit in WebKit/Gecko.
 
 It uses jQuery Data to store it's options and elements, these are name spaced switchify:options and switchify:elements, respectivly, and can be accessed if you need to.
 
-If you need to manipulate any options, do so by calling Switchify again, and pass in the differing options.  
+If you need to manipulate any options, do so by calling Switchify again, and pass in the differing options. 
+
+
+##Supported Browsers
+              
+
+Tested in the following browsers:
+
+IE 8, 9
+Firefox 7 
+Safari 5
+Opera  11
+Chrome 15
 
 ##Sample
 
