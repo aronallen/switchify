@@ -1,0 +1,66 @@
+.switchify *{
+	padding:0px;
+	margin:0px;
+}
+
+
+.switchify{
+	white-space: nowrap;
+	display:block;
+	overflow:hidden;
+	margin:10px;
+	font-family:helvetica;
+	float:left;
+}
+
+
+
+.switchify .inner{
+	float:left;
+	cursor:pointer;
+	height:100%;
+}
+
+
+.switchify .inner.animate{
+	-webkit-transition:all .10s linear;
+	-moz-transition:all .10s linear;
+	-o-transition:all .10s linear;
+	transition:all .10s linear;
+}
+
+.switchify .inner > div{
+	display:inline-block;
+	height:100%;
+	clear:none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;	
+	float:left;
+}
+
+
+.switchify .inner div p{
+	width:100%;
+	clear:none;
+	font-weight:bold;
+	color:white;
+	text-align:center;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+
+.switchify .inner .peg{
+	background-color:#ddd;		
+}
+
+.switchify .inner .on{
+	background-color:#00aa00;		
+}
+
+.switchify .inner .off{
+	background-color:#C2191C;
+}
