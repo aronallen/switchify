@@ -10,9 +10,8 @@ return data[i].identity;}},searchVersion:function(dataString){var index=dataStri
 		var switchify = this;
 	
 		if(typeof callback === 'undefined'){
-			callback = function(state){
+			callback = function(state){ 
 				//callback example.
-				//the callback is triggered when the animation has ended.
 			}
 		}
 
@@ -65,7 +64,6 @@ return data[i].identity;}},searchVersion:function(dataString){var index=dataStri
 		}
 		
 		
-		console.log(switchify);
 
 
 
@@ -406,7 +404,6 @@ return data[i].identity;}},searchVersion:function(dataString){var index=dataStri
             translate: function(x) {
 	
 	
-				console.log(browser);
 																
 				switch (browser) {
 

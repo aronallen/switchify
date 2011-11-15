@@ -1,0 +1,32 @@
+#Switchify
+
+Switchify is a jQuery plugin that emulates a switch from UIKit in WebKit/Gecko.
+
+It uses jQuery Data to store it's options and elements, these are name spaced switchify:options and switchify:elements, respectivly, and can be accessed if you need to. 
+
+##Parameters
+
+Switchify accepts two parameters, the first parameter is the options parameter.
+
+Here are the default options
+
+- size: 44, //the height of the switch, the width is calculated from this value depending on the string lengths
+- strings:
+	- on: "ON", //the label shown when the switch is on.
+	- off: "OFF", //the label shown when the switch is off.
+- state: true, //the state of the switch (accces this value externally by $(element).data('switchify:options').state)
+- shading: true, //whether to apply shading on the switch or not (gradients and box-shadows)
+- rounded: true, //whether to round the corners of the switch.
+- clickable: true //whether the user can click the switch, instead of dragging it.
+
+The second parameter is a callback parameter, it is called each time the user has stopped interacting, and the animations have ended.  
+
+Here is a callback example:
+
+function(state){
+		console.log(state);
+}                     
+
+##Attributions
+
+Browser detect from http://www.quirksmode.org/js/detect.html
