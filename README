@@ -4,11 +4,15 @@ Switchify is a jQuery plugin that emulates a switch from UIKit in WebKit/Gecko.
 
 It uses jQuery Data to store it's options and elements, these are name spaced switchify:options and switchify:elements, respectivly, and can be accessed if you need to.
 
-If you need to manipulate any options, do so by calling Switchify again, and pass in the differing options.
+If you need to manipulate any options, do so by calling Switchify again, and pass in the differing options.  
+
+##Sample
+
+http://aronallen.com/samples/switchify/
 
 ##Known issues
 
-WebKit has a border-radius clipping bug on rounded elements, therefor I animate the 'margin-left' CSS property if the switch parameter 'rounded' is 'true' on WebKit.
+WebKit Opera have a border-radius clipping bug on rounded elements, therefor I animate the 'margin-left' CSS property if the switch parameter 'rounded' is 'true' on WebKit, this approach does not work on Opera, if you must support Opera, I suggest using the square version of the switch.
 
 The 'margin-left' parameter is not a hardware accelerated animation, therefore I suggest you use the square version of the switch, if you want the switch to behave naturally in WebKit on iOS.
 
@@ -29,7 +33,7 @@ Switchify accepts two parameters, the first parameter is the options parameter.
 - strings:
 	- on: "ON", //the label shown when the switch is on.
 	- off: "OFF", //the label shown when the switch is off.
-- state: true, //the state of the switch (accces this value externally by $(element).data('switchify:options').state)
+- state: true, //the state of the switch (access this value externally by $(element).data('switchify:options').state)
 - shading: true, //whether to apply shading on the switch or not (gradients and box-shadows)
 - rounded: true, //whether to round the corners of the switch.
 - clickable: true //whether the user can click the switch, instead of dragging it.

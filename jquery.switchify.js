@@ -32,7 +32,8 @@ return data[i].identity;}},searchVersion:function(dataString){var index=dataStri
             	shading: true,
 				rounded: false,
 				clickable: true
-            }
+            }         
+
 
 			if(!switchify.data('switchify:options')){
 				switchify.data('switchify:options', defualt_options);
@@ -51,17 +52,14 @@ return data[i].identity;}},searchVersion:function(dataString){var index=dataStri
 		var elements = switchify.data('switchify:elements');
 		var options = switchify.data('switchify:options');
 		var browser = BrowserDetect.browser;
-		
+				
 		
 		if(options.size < 20){
 			options.size = 20;
 			console.log("switchify: can't make switch smaller than 20px, forcing switch to 20px size")
 		}
 		
-		if(browser === 'Opera' && options.rounded){
-			console.log('switchify: sorry, but opera renders the rouded switch incorrectly, forcing a non rounded switch');
-			options.rounded = false;
-		}
+
 		
 		
 
@@ -181,11 +179,9 @@ return data[i].identity;}},searchVersion:function(dataString){var index=dataStri
                         'border-radius': options.size / 2
                     });
 
-
-
                     //The padding is to pseudo center the text, so it appears centered, add border radius as well
                     $(".off", elements.inner).css({
-                        'border-top-right-radius': options.size / 2,
+                        'border-radius': '0px ' + options.size / 2 + 'px ' + options.size / 2 + 'px 0px',
                         'border-bottom-right-radius': options.size / 2
                     });
                     $(".on", elements.inner).css({
