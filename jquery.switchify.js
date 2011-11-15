@@ -30,7 +30,7 @@ return data[i].identity;}},searchVersion:function(dataString){var index=dataStri
             	},
             	state: true,
             	shading: true,
-				rounded: true,
+				rounded: false,
 				clickable: true
             }
 
@@ -117,9 +117,13 @@ return data[i].identity;}},searchVersion:function(dataString){var index=dataStri
             css: function() {
 
                 switchify.css({
-                    '-webkit-tap-highlight-color': 'rgba(0,0,0,0)'
+                    '-webkit-tap-highlight-color': 'rgba(0,0,0,0)',
+					'white-space':'nowrap',
+					'display':'block',
+					'overflow':'hidden',
+					'margin':'10px',
+					'float':'left'
                 });
-
 
 
                 $(".off p", elements.inner).css({
@@ -131,7 +135,7 @@ return data[i].identity;}},searchVersion:function(dataString){var index=dataStri
                     'padding-right': options.size/1.333,
                     'padding-left': options.size/4,
                     'float': 'right'
-                });
+                });          
 
 
 				//Baseline fixing
@@ -140,7 +144,33 @@ return data[i].identity;}},searchVersion:function(dataString){var index=dataStri
 				}
 				if(browser === 'Firefox'){
 					$("p", elements.inner).css({'top' : '3.97%', 'position' : 'relative'});
-				}
+				}      
+				
+				elements.inner.css({
+					'float':'left',
+					'cursor':'pointer',
+					'height':'100%'
+				})          
+				
+				
+				elements.inner.children("div").css({
+					'display':'inline-block',
+					'height':'100%',
+					'clear':'none',
+					'-webkit-box-sizing': 'border-box',
+					'-moz-box-sizing': 'border-box',
+					'box-sizing': 'border-box',
+					'float':'left'
+				});
+				
+				
+				$("p", elements.inner).css({width:'100%',
+				'clear':'none',
+				'font-weight':'bold',
+				'text-align':'center',
+				'-webkit-box-sizing':'border-box',
+				'-moz-box-sizing':'border-box',
+				'box-sizing':'border-box'})
 
                 //Round corners
                 if (options.rounded) {

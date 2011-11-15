@@ -12,14 +12,23 @@
 	
 	<script type="text/javascript">
 	$(document).ready(function(){
-		$("#switch").switchify({size: 40, shading : true, rounded : true, strings : {on: "ON", off : "OFF" }, state : false, clickable : true});		
+		$("#switch").switchify({size: 40, shading : true, rounded : true, strings : {on: "ON", off : "OFF" }, state : false, clickable : true});	 
+		$("#switch2").switchify({rounded : false});
+		$("#switch3").switchify({rounded : false, shading : false}); 
+		 
 	});
 	</script>
 	
 	<style type="text/css">
 	
 	.switchify{
-		box-shadow:0px 0px 1px black;
+		box-shadow:0px 0px 1px black;  
+		clear:both;
+	}    
+	
+	p{
+		clear:both;
+		
 	}
 	
 	</style>
@@ -27,13 +36,14 @@
 	<title></title>
 </head>
 <body>
-	<h1>Switch</h1>
-	<p>Below is my switch project, its based on jQuery and very simple to use/extend.
-	<p>Most of the CSS is calculated within the view, the only thing you need to do is provede a size attribute (that is the height) when initiating the switch, the width, font-size, etc. will be calculated automaticly, while considering strings lengths...
-	<p>There is also a <em>shading</em> attribute, if this is set to true, there will be a lot of nice gardients and shadows on the switch.
-	<p>Some bug in in <strong>Safari</strong> (5.1.1) and <strong>Chrome</strong> (15.0.8...) causes the pink area to bleed the rounded corners, even though overflow:hidden is on the containing DIV, <strong>Firefox</strong> (7.0.1) renders the content as expected.
-		<div id="switch"></div>
+	<h1>Switchify</h1> 
+		<p>not hardware accelerated on webkit</p>
+		<div id="switch"></div> 
+		<p>Hardware accelerated on webkit</p>
 		<div id="switch2"></div>
+		<p>Shading off</p>
+		<div id="switch3"></div>
+		
 		
 </body>
 </html>
