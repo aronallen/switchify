@@ -16,7 +16,7 @@ WebKit Opera have a border-radius clipping bug on rounded elements, therefor I a
 
 The 'margin-left' parameter is not a hardware accelerated animation, therefore I suggest you use the square version of the switch, if you want the switch to behave naturally in WebKit on iOS.
 
-The CSS property that is chosen for the transition are as follows:
+The CSS property that is chosen for the transition, follows this priority list:
 traslate3d(x , 0, 0) //except on WebKit with 'rounded' : true
 translateX(x) // except on WebKit with 'rounded' : true.
 margin-left // fallback for older browsers           

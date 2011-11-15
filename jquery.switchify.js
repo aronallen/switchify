@@ -449,12 +449,10 @@ return data[i].identity;}},searchVersion:function(dataString){var index=dataStri
 							break;
 						}
 					case 'Opera':
-						if(!options.rounded){
-							elements.inner.css({
-		                		'-o-transform': 'translateX(' + (x) + 'px)',
-		            		});
-							break;
-						}
+						elements.inner.css({
+		                	'-o-transform': 'translateX(' + (x) + 'px)',
+		            	});
+						break;
 					default:
 						elements.inner.css({
 							'margin-left' : x
