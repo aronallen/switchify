@@ -2,13 +2,28 @@
 
 Switchify is a jQuery plugin that emulates a switch from UIKit in WebKit/Gecko.
 
-It uses jQuery Data to store it's options and elements, these are name spaced switchify:options and switchify:elements, respectivly, and can be accessed if you need to. 
+It uses jQuery Data to store it's options and elements, these are name spaced switchify:options and switchify:elements, respectivly, and can be accessed if you need to.
+
+If you need to manipulate any options, do so by calling Switchify again, and pass in the differing options.
+
+##Known issues
+
+WebKit has a border-radius clipping bug on rounded elements, therefor I animate the 'margin-left' CSS property if the switch parameter 'rounded' is 'true' on WebKit.
+
+The 'margin-left' parameter is not a hardware accelerated animation, therefore I suggest you use the square version of the switch, if you want the switch to behave naturally in WebKit on iOS.
+
+The CSS property that is chosen for the transition are as follows:
+traslate3d(x , 0, 0) //except on WebKit with 'rounded' : true
+translateX(x) // except on WebKit with 'rounded' : true.
+margin-left // fallback for older browsers           
 
 ##Parameters
 
 Switchify accepts two parameters, the first parameter is the options parameter.
+                                
 
-Here are the default options
+
+###Options
 
 - size: 44, //the height of the switch, the width is calculated from this value depending on the string lengths
 - strings:
@@ -18,15 +33,14 @@ Here are the default options
 - shading: true, //whether to apply shading on the switch or not (gradients and box-shadows)
 - rounded: true, //whether to round the corners of the switch.
 - clickable: true //whether the user can click the switch, instead of dragging it.
-
+                                                                                                                                       
+###Callback
+          
 The second parameter is a callback parameter, it is called each time the user has stopped interacting, and the animations have ended.  
-
-Here is a callback example:
 
 function(state){
 		console.log(state);
 }                     
 
 ##Attributions
-
-Browser detect from http://www.quirksmode.org/js/detect.html
+Embedded BrowserDetect from http://www.quirksmode.org/js/detect.html

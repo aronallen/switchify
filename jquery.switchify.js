@@ -402,9 +402,7 @@ return data[i].identity;}},searchVersion:function(dataString){var index=dataStri
             },
 
             translate: function(x) {
-	
-	
-																
+																	
 				switch (browser) {
 
 					case 'Chrome':
