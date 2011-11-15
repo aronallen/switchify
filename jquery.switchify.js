@@ -29,7 +29,8 @@ return data[i].identity;}},searchVersion:function(dataString){var index=dataStri
                 	off: "OFF"
             	},
             	state: true,
-            	shading: true,
+            	shading: true,  
+				//this is experimental do not use
 				rounded: false,
 				clickable: true
             }         
@@ -274,7 +275,9 @@ return data[i].identity;}},searchVersion:function(dataString){var index=dataStri
 				var on_w  = $(".option.on", elements.inner).width();
 				
 				
-				var widest = (off_w > on_w) ? off_w : on_w;
+				var widest = (off_w > on_w) ? off_w : on_w; 
+				//at least 1.5 unit 
+				widest = (widest > options.size * 1.5) ? widest : options.size * 1.5;
 
                 $(".option", elements.inner).width(widest);
 

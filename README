@@ -35,7 +35,6 @@ Switchify accepts two parameters, the first parameter is the options parameter.
 	- off: "OFF", //the label shown when the switch is off.
 - state: true, //the state of the switch (access this value externally by $(element).data('switchify:options').state)
 - shading: true, //whether to apply shading on the switch or not (gradients and box-shadows)
-- rounded: true, //whether to round the corners of the switch.
 - clickable: true //whether the user can click the switch, instead of dragging it.
                                                                                                                                        
 ###Callback
