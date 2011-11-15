@@ -10,17 +10,6 @@ If you need to manipulate any options, do so by calling Switchify again, and pas
 
 http://aronallen.com/samples/switchify/
 
-##Known issues
-
-WebKit Opera have a border-radius clipping bug on rounded elements, therefor I animate the 'margin-left' CSS property if the switch parameter 'rounded' is 'true' on WebKit, this approach does not work on Opera, if you must support Opera, I suggest using the square version of the switch.
-
-The 'margin-left' parameter is not a hardware accelerated animation, therefore I suggest you use the square version of the switch, if you want the switch to behave naturally in WebKit on iOS.
-
-The CSS property that is chosen for the transition, follows this priority list:
-traslate3d(x , 0, 0) //except on WebKit with 'rounded' : true
-translateX(x) // except on WebKit with 'rounded' : true.
-margin-left // fallback for older browsers           
-
 ##Parameters
 
 Switchify accepts two parameters, the first parameter is the options parameter.
